@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -39,12 +37,24 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "emmet_language_server",
     },
     -- customize language server configuration passed to `vim.lsp.config`
     -- client specific configuration can also go in `lsp/` in your configuration root (see `:h lsp-config`)
     config = {
-      -- ["*"] = { capabilities = {} }, -- modify default LSP client settings such as capabilities
+      emmet_language_server = {
+        filetypes = {
+          "css",
+          "html",
+          "javascriptreact",
+          "less",
+          "sass",
+          "scss",
+          "typescriptreact",
+          "astro",
+          "vue",
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {
