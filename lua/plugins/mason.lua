@@ -11,12 +11,19 @@ return {
       ensure_installed = {
         -- install language servers
         "lua-language-server",
+        "vtsls",
+        "typescript-language-server",
+        "eslint-lsp",
+        "emmet-language-server",
+        "tailwindcss-language-server",
 
         -- install formatters
         "stylua",
+        "prettier",
 
         -- install debuggers
         "debugpy",
+        "js-debug-adapter",
 
         -- install any other package
         "tree-sitter-cli",
